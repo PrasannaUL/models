@@ -1,0 +1,45 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        center{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Display topics</h1>
+        <table border="2px" style="border-collapse: collapse;">
+             
+             <tr>
+                 <th>PK value</th>
+                 <th>Name</th>
+                 <th>Date</th>
+                 <th>Author</th>
+                  
+            </tr>
+
+            {% for ao in accessrecords %}
+            <tr>
+               <td>{{ao.pk}}</td>
+               <td>{{ao.name}}</td>
+               <td>{{ao.date}}</td>
+               <td>{{ao.author}}</td>
+               
+            </tr>
+            {% endfor %}
+             
+        </table>
+    </center>
+</body>
+</html>
